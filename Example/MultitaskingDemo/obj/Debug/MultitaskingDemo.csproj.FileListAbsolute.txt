@@ -1,0 +1,7 @@
+C:\mygithub\MultitaskingExample\Example\MultitaskingDemo\bin\Debug\MultitaskingDemo.exe.config
+C:\mygithub\MultitaskingExample\Example\MultitaskingDemo\bin\Debug\MultitaskingDemo.exe
+C:\mygithub\MultitaskingExample\Example\MultitaskingDemo\bin\Debug\MultitaskingDemo.pdb
+C:\mygithub\MultitaskingExample\Example\MultitaskingDemo\obj\Debug\MultitaskingDemo.csprojAssemblyReference.cache
+C:\mygithub\MultitaskingExample\Example\MultitaskingDemo\obj\Debug\MultitaskingDemo.csproj.CoreCompileInputs.cache
+C:\mygithub\MultitaskingExample\Example\MultitaskingDemo\obj\Debug\MultitaskingDemo.exe
+C:\mygithub\MultitaskingExample\Example\MultitaskingDemo\obj\Debug\MultitaskingDemo.pdb

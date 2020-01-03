@@ -26,8 +26,8 @@
         public static void Main(string[] args)
         {
 
-            Task Producer = new Task(job1);
-            Task consumer = new Task(job2);
+            Task Producer = new Task(Job1);
+            Task consumer = new Task(Job2);
 
             Producer.Start();
             consumer.Start();
@@ -35,7 +35,7 @@
         }
 
         //Producer Job
-        public static void job1()
+        public static void Job1()
         {
             key = Console.ReadKey();
             while (key.Key == ConsoleKey.OemPlus || key.Key == ConsoleKey.Escape)
@@ -74,7 +74,7 @@
         }
 
         //Consumer Job 
-        public static void job2()
+        public static void Job2()
         {
 
             while (key.Key != ConsoleKey.Escape)

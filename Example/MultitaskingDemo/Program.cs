@@ -9,7 +9,8 @@
     public class JobsAssign
     {
         public string process { get; set; }
-        public int job { get; set; }// Random Number between 1-3 assign to process
+        // Random Number between 1-3 assign to process
+        public int job { get; set; }
     }
 
     //Main Class
@@ -18,9 +19,12 @@
         public static Queue<JobsAssign> Processing = new Queue<JobsAssign>();
 
         static int i = 1;
-        static int Empty = 10;//Number of free spaces available in queue.
-        static int mutex = 1;//Variable which takes care of one action woring in queue at a time.
-        static int Full = 0;//Number of Process available in queue.
+        //Number of free spaces available in queue.
+        static int Empty = 10;
+        //Variable which takes care of one action woring in queue at a time.
+        static int mutex = 1;
+        //Number of Process available in queue.
+        static int Full = 0;
         public static ConsoleKeyInfo key = Console.ReadKey();
 
         public static void Main(string[] args)
@@ -49,18 +53,19 @@
                     if (Empty > 0)
                     {
                         Empty--;
-                        mutex--;//Using the resources
+                        //Using the resources
+                        mutex--;
 
                         var jobsAssign = new JobsAssign
                         {
                             process = "P" + i,
-                            job = RandomNumber(1, 3)
+                            job = RandomNumber(1, 4)
                         };
 
                         Processing.Enqueue(jobsAssign);
                         Console.WriteLine("\nProcess" + jobsAssign.process + "is Entered in a queue with Job" + jobsAssign.job);
-
-                        mutex++;//Release the ressources
+                        //Release the resources
+                        mutex++;
                         Full++;
                         i++;
                     }
@@ -79,11 +84,11 @@
 
             while (key.Key != ConsoleKey.Escape)
             {
-
                 if (Full > 0 && mutex == 1)
                 {
-                    Full = Full - 1;
-                    mutex = mutex - 1; //Using the resources
+                    Full --;
+                    //Using the resources
+                    mutex--; 
                     Console.WriteLine(" processor Process" + Processing.Peek().process + " in running with job " + Processing.Peek().job);
 
                     if (Processing.Peek().job == 1)
@@ -97,7 +102,7 @@
                     }
                     else if (Processing.Peek().job == 3)
                     {
-                        Thread.Sleep(7000);
+                        Thread.Sleep(5000);
                     }
 
                     Console.WriteLine(" processor Process" + Processing.Peek().process + " in Completed with job " + Processing.Peek().job);
@@ -105,13 +110,10 @@
                     Processing.Dequeue();
                     Console.WriteLine("Process\t " + peek + "\tis remove from queue.\n");
                     //Release the ressources
-                    mutex = mutex + 1;
-                    Empty = Empty + 1;
+                    mutex ++;
+                    Empty ++;
                 }
             }
-
-
-
         }
 
         //Random Number generator

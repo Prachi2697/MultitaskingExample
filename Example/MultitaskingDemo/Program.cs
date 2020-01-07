@@ -11,9 +11,9 @@
         public static Adder Add = new Adder();
         public static Remover Remove = new Remover();
 
-        private static int empty = 10;
-        private static int mutex = 1;
-        private static int full = 0;
+        public static int empty = 10;
+        public static int mutex = 1;
+        public static int full = 0;
 
         public static ConsoleKeyInfo key = Console.ReadKey();
 

@@ -43,8 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adder.cs" />
+    <Compile Include="JobAssign.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Remover.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
